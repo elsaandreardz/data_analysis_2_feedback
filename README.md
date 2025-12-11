@@ -19,11 +19,11 @@
 
 - Data cleaning: 0/0.5 - **Evidence:** Minimal data cleaning was performed. The student created `grade92_sqrd` (squared education) and `earnwke_ln` (log wages), but did NOT create a proper female dummy variable. The original `sex` variable (1=male, 2=female) was used directly, which leads to confusing coefficient interpretation. A proper female dummy (0=male, 1=female) should have been created.
 
-🔵 The instruction file never mentions cleaning should be performed. It is a important practice for data analysis projects but we decided not to proceed as we evaluated it was not needed. Changing the variable was also not mentioned in the instructions file, while it was commented in class, it was not clear since the file was not being yet considered. 
+🔵 The instruction file never mentions cleaning should be performed. It is an important practice for data analysis projects but we decided not to proceed as we evaluated it was not needed or expected. Changing the binary values was also not mentioned in the instructions file and lecture on proper dummy variables in class only occured after the submission deadline. For these reasons we seemingly negeleted this step and believe that these expectation are unfounded.
 
 - Code documentation: 0/0.5 - **Evidence:** The code has minimal comments. There are brief comments like `# import dataset`, `# Linear Regression`, `# Square the education variable`, but no markdown cells explaining the methodology, rationale for choices, or interpretation of steps. Section headers exist but lack explanatory text.
 
-🔵 Since it is a data analysis class, we assumed the format of the coding was not crucial, specially when a report is being created specifying all these details. Usually, there is not explanatory text in the coding delivarbles, the explanation is mentioned on the report. 
+🔵 Since it is a data analysis class, we assumed the format of the coding was not crucial, specially when a report is being created specifying all these details. Usually, there is not explanatory text in the coding delivarbles, the explanation is mentioned on the report. Moreover, we directly emmulated our code documentation to the level and specificity of the code examples provided in the supplemental Coding 2 course--as the coding instruction for this project came from the Coding 2 course. So we believe our documentation is more than sufficient for the assignment.
 
 **Comments:** The most significant issue is the failure to select a specific occupation as required by the assignment. This fundamentally changes the analysis from examining the gender gap within a specific occupation to a general population-level analysis. The lack of a proper female dummy variable also complicates interpretation.
 
@@ -41,7 +41,7 @@
 
 - Regression table: 0.5/1.0 - **Evidence:** The student uses Stargazer to create a comparison table (Figure 6) showing coefficients, standard errors, and significance stars for three models. However, the table only includes reg2, reg3, and reg4 - the unconditional model (reg1) is not included in the comparison table. The table is well-formatted with proper significance indicators.
 
-🔵 We do not consider missing 1 ou of 4 models implies a 50% point deduction, considering the results were present on the report. 
+🔵 We do not consider missing 1 out of 4 models implies a 50% point deduction, considering the results were present on the report. Moreover, we structured our analysis in two parts: (1) an initial understanding of the basic relationship between gender and salary and (2) the multivariable relationship involving gender, salary, and education. Thus we presented, first, the outcome of the 2-variable relationship and then, second, the outcomes of the 3-variable relationship. So, our report did include the table information for all models used, it was just presented under a different logic. Thus, we do not understand or agree with the point deduction given here.
 
 **Comments:** The analysis shows good effort with multiple model specifications but does not demonstrate how the gender gap varies with education. The models only control for education (showing parallel effects) rather than showing different gaps at different education levels. The visual stratification by gender in plots hints at the concept but is not formally analyzed.
 
@@ -49,7 +49,7 @@
 
 - Coefficient interpretation: 0.5/0.75 - **Evidence:** The PDF provides interpretations of key coefficients. For example: "if the gender remains constant, on average a one unit increase in education level correlates with a $116 increase in weekly earnings" and "at the same education level, on average, a female is expected to earn $289 less than a man (weekly)." For the log model: "a woman's earnings are 35.03% less than a man's" (though this should technically be approximately 35%, not exactly). The interpretations are generally correct but imprecise due to using sex (1,2) instead of a female dummy (0,1). The coefficient of -243 for sex should be interpreted as the change when moving from sex=1 to sex=2, not directly as the female-male difference.
 
-🔵 It seems the interpretation was made adequatley according to the comments, the error was the (1,2) vs (0,1), which had deduction on the grade on some bullets above. 
+🔵 It seems the interpretation was made adequatley according to the comments, the error was the (1,2) vs (0,1), which had already been addressed wih a  deduction on the grade on some bullets above so we do not believe it should again be deducted here. Especially because our report did not use the numerical values of the gender variable but the terms associated with the values (the reader would not easily understand which gender is 0, 1, or 2) .
 
 - Statistical inference: 0.5/0.5 - **Evidence:** The student discusses R-squared values throughout: "r-squared value of 0.036, which is drastically low", "r-squared value of .238 which is too low to be considered significant", "r-squared value of .215". The PDF also references "the low r square values consistently demonstrated that sex and education level are insufficient variables to explain the majority of the observed variation." The regression outputs show p-values (P>|z|) = 0.000 for all coefficients, though this is not explicitly discussed in the report.
 
@@ -58,6 +58,8 @@
 - Report quality: 0.25/0.25 - **Evidence:** The report is professionally formatted with clear figures, numbered appropriately. Within reasonable length. Student names and IDs are included.
 
 **Comments:** The interpretations show understanding of regression coefficients, but the lack of interaction terms means the core research question (how does the gap vary with education?) cannot be properly answered. The misinterpretation of R-squared as indicating "insufficiency" is a conceptual error.
+
+🔵 Our models and summary reflected what we had done in class before the deadline of this assignment. Specifically, we had not learned about interactions yet in class so we do not agree with getting all the points deducted for failing to do something we had not covered yet. We did have conclusions in our report, based the models we had covered in class by this point, so we don't agree with a 0% in 'Summary of findings' which indicates that they are missing.
 
 ## Total Score: 4.25/8 points
 
